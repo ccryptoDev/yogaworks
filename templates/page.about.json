@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_pTzbCz": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/34ca4bbfa5aeab3fb80e798cc45926bc.jpg",
+        "image_2": "shopify:\/\/shop_images\/6fef9731b40317289e22a1ba5b1d06d0.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_n74NNr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jPiFhM": {
+          "type": "heading",
+          "settings": {
+            "heading": "The YogaWorks story",
+            "heading_size": "h1"
+          }
+        },
+        "text_FHawzX": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>In 1987, we opened our first studio with a mission: to provide people from all walks of life with a happy place to connect through mindful movement. Today, our mission remains, YogaWorks is a destination for those who approach their practice — both on and off the mat — with intention and authenticity.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jPiFhM",
+        "text_FHawzX"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_MK69yw": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_dVeYB7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Our apparel is crafted with tech-forward, studio-tested materials and designed with an emphasis on simplicity and utility. Each piece supports the dynamic flow of yoga and offers elevated style that goes beyond the mat. We don’t just sell clothing. We create apparel that brings harmony and balance — to reflect, and make possible, an inner journey of mindfulness. <\/strong><\/p>",
+            "text_style": "body"
+          }
+        },
+        "offer_hX7reV": {
+          "type": "offer",
+          "settings": {
+            "header": "Move with us",
+            "text": "<p><a href=\"https:\/\/yogaworks.com\/\" title=\"https:\/\/yogaworks.com\/\"><strong>Move with Us<\/strong><\/a><\/p><p><a href=\"https:\/\/yogaworks.com\/\" target=\"_blank\" title=\"https:\/\/yogaworks.com\/\">New students get 3 months of ree, expert-led YogaWorks classes<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_dVeYB7",
+        "offer_hX7reV"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1705526c71d476dc30cd94462ffd7fde.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_JGUPVA": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "<strong>Wear YogaWorks<\/strong>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "apparel",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_pTzbCz",
+    "rich_text_n74NNr",
+    "image_with_text_MK69yw",
+    "featured_collection_JGUPVA"
+  ]
+}

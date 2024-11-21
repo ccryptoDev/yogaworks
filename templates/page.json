@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h3,h4,p,li,strong {font-family: \"Public Sans\", \"Public Sans\", Helvetica, sans-serif; color: #000000;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
