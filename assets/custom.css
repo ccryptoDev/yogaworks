@@ -58,6 +58,31 @@
     font-weight: 700;
     font-style: italic;
 }
+html, body {
+    overflow-x: hidden
+}
+html *, body * {
+    box-sizing: border-box
+}
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size-adjust: 100%
+}
+body {
+    color: #000;
+    background-color: #fff;
+    font-family: 'Public Sans', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33333;
+    font-size: 15px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+
+}
 
 /* GLOBAL STYLES */
 /** this overwrites global page width in settings which accepts only absolute values */
@@ -95,10 +120,16 @@
 .announcement-bar__message {
     &.h5 {
         color: inherit;
-        text-transform: uppercase;
+        text-transform: none;
     }
 }
-
+.announcement-bar__message {
+    padding: 5px;
+    min-height: 0;
+    letter-spacing: normal;
+    line-height: 14px;
+    font-size: 15px;
+}
 .announcement-bar__link {
     .icon-arrow {
         display: none;
@@ -144,88 +175,87 @@
     }
 }
 
-    /* Product card */
+/* Product card */
 
-    input[type=radio][name$=_card_color]{
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        appearance: none;
-        background-size: 9px 9px;
-        background-image: repeating-linear-gradient(45deg, #000 0, #000 1px, #ebebeb 0, #ebebeb 50%);
-    }
+input[type=radio][name$=_card_color]{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    appearance: none;
+    background-size: 9px 9px;
+    background-image: repeating-linear-gradient(45deg, #000 0, #000 1px, #ebebeb 0, #ebebeb 50%);
+}
 
-    /* Slider */
+/* Slider */
 
+.collection  .slider-buttons {
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    top: 50%;
+    width: 85%;
+    left: 11%;
+    transform: translateY(-50%) !important;
+}
+
+
+.collection button.slider-button svg path {
+    fill: #ffff !important;
+}
+
+.collection .slider-button {
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 22px;
+    height: 22px;
+}
+
+.slider-button--prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.slider-button--next {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.collection .slider-counter.caption {
+    display: none !important;
+}
+
+
+@media (max-width: 600px) {
     .collection  .slider-buttons {
-        z-index: 999;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: space-between !important;
-        top: 50%;
-        width: 85%;
-        left: 11%;
-        transform: translateY(-50%) !important;
+        width: 88% !important;
+        left: 2% !important;
     }
+}
 
 
-    .collection button.slider-button svg path {
-        fill: #ffff !important;
-    }
-
-    .collection .slider-button {
-        border: solid black;
-        border-width: 0 1.5px 1.5px 0;
-        display: inline-block;
-        padding: 3px;
-        width: 22px;
-        height: 22px;
-    }
-
-    .slider-button--prev {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-    }
-    .slider-button--next {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-    }
-
-    .collection .slider-counter.caption {
-        display: none !important;
-    }
-
-
-    @media (max-width: 600px) {
-        .collection  .slider-buttons {
-            width: 88% !important;
-            left: 2% !important;
+@media screen and (min-width: 750px) {
+    .grid {
+        &.product-grid {
+            column-gap: 25px !important;
         }
     }
 
+}
 
-    @media screen and (min-width: 750px) {
-        .grid {
-            &.product-grid {
-                column-gap: 25px !important;
-            }
-        }
-
+@media screen and (min-width: 750px) {
+    .page-width.collection__title {
+        padding: 0;
     }
-
-    @media screen and (min-width: 750px) {
-        .page-width.collection__title {
-            padding: 0;
-        }
-    }
+}
 
 @media screen and (min-width: 990px) {
     .slider--desktop.grid--4-col-desktop .grid__item {
         width: calc((94% - var(--desktop-margin-left-first-item)) / 4 - var(--grid-desktop-horizontal-spacing)* 3) !important;
     }
 }
-
 
 .quick-add.no-js-hidden {
     display: none;
@@ -239,4 +269,3 @@
 .quick-add.no-js-hidden:hover {
     display: block;
 }
-
