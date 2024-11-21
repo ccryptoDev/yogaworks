@@ -1,3 +1,64 @@
+/* Public Sans font */
+/* Normal */
+@font-face {
+    font-family: 'Public Sans';
+    src: url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Regular.woff2?v=1732228283') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Regular.woff?v=1732228283') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Medium.woff2?v=1732228283') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Medium.woff?v=1732228283') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-SemiBold.woff2?v=1732228283') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-SemiBold.woff?v=1732228283') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Bold.woff2?v=1732228283') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0888/3696/4634/files/PublicSans-Bold.woff?v=1732228283') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Public Sans';
+    src: url('{{ "PublicSans-Italic.woff2" | asset_url }}') format('woff2'),
+         url('{{ "PublicSans-Italic.woff" | asset_url }}') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('{{ "PublicSans-MediumItalic.woff2" | asset_url }}') format('woff2'),
+         url('{{ "PublicSans-MediumItalic.woff" | asset_url }}') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('{{ "PublicSans-SemiBoldItalic.woff2" | asset_url }}') format('woff2'),
+         url('{{ "PublicSans-SemiBoldItalic.woff" | asset_url }}') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src: url('{{ "PublicSans-BoldItalic.woff2" | asset_url }}') format('woff2'),
+         url('{{ "PublicSans-BoldItalic.woff" | asset_url }}') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
 /* GLOBAL STYLES */
 /** this overwrites global page width in settings which accepts only absolute values */
 .page-width {
