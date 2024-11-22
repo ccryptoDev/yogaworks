@@ -15,7 +15,7 @@
 -%}
 
 {% if social_icons %}
-  {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+  {% comment %} {{ 'component-list-social.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {% endif %}
 
 <div
