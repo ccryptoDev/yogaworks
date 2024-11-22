@@ -59,16 +59,16 @@
     font-style: italic;
 }
 html, body {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 html *, body * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-size-adjust: 100%
+    font-size-adjust: 100%;
 }
 body {
     color: #000;
@@ -123,8 +123,12 @@ body {
         text-transform: none;
     }
 }
-.announcement-bar__message {
+.announcement-bar__link {
+    min-height: 26px;
     padding: 5px;
+}
+.announcement-bar__message {
+    padding: 0;
     min-height: 0;
     letter-spacing: normal;
     line-height: 14px;
@@ -256,7 +260,6 @@ input[type=radio][name$=_card_color]{
         width: calc((94% - var(--desktop-margin-left-first-item)) / 4 - var(--grid-desktop-horizontal-spacing)* 3) !important;
     }
 }
-
 .quick-add.no-js-hidden {
     display: none;
     position: absolute;
@@ -265,7 +268,6 @@ input[type=radio][name$=_card_color]{
     transform: translate(-50%, -50%);
     width: 100%;
 }
-
 .quick-add.no-js-hidden:hover {
     display: block;
 }
