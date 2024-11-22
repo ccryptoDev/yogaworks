@@ -26,12 +26,20 @@
             "heading": "THE STUDIO",
             "menu": "the-studio"
           }
+        },
+        "text_MCNAFt": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
         }
       },
       "block_order": [
         "image_8Kbj8D",
         "link_list_ndiUBL",
-        "link_list_QynWmT"
+        "link_list_QynWmT",
+        "text_MCNAFt"
       ],
       "settings": {
         "color_scheme": "scheme-1",
