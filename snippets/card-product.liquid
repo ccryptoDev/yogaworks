@@ -55,11 +55,12 @@
     >
       <div
               class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
-              style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+              {% comment %} style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;" {% endcomment %}
+              style="--ratio-percent: 128%;"
       >
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
-            <div class="media media--transparent media--hover-effect">
+            <div class="media media--transparent">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                       srcset="
@@ -465,7 +466,10 @@
 
             {% comment %} Hiding the product attribute inform {% endcomment %}
 
-            {% comment %} {% assign keys = "Color,color,Colour,colour" | split: ',' %} 
+            {% assign keys = "Color,color,Colour,colour" | split: ',' %} 
+            {% assign first_color_option = nil %}  
+            {% assign first_background_style = nil %}
+            
             {% for key in keys %}
               {% if card_product.options contains key %}
                 <div class="product_tile_color_holder">
@@ -481,19 +485,27 @@
                         {% if variant.metafields.image.swatch %}
                           {% assign background_style = "url(" | append: variant.metafields.image.swatch | append: ")" %}
                         {% endif %}
+
+                        {% if first_color_option == nil %}
+                          {% assign first_color_option = color_option %}
+                          {% assign first_background_style = background_style %}
+                        {% endif %}
+
                       {% endif %}
                     {% endfor %}
-                    <input
+                    <div class="product-color">
+                      <input
                             type="radio"
                             name="{{ card_product.id }}_card_color"
                             id="{{ card_product.id }}_color_{{ forloop.index }}"
-                            style="background: {{ background_style }}; background-size: cover;">
+                            style="background: {{ background_style }}; background-size: cover; border: 1px solid {% if background_style == 'White' %} #000 {% else %} {{background_style}} {% endif %}">
+                    </div>
                   {% endfor %}
                 </div>
               {% endif %}
-            {% endfor %} {% endcomment %}
+            {% endfor %} 
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true, first_variant: first_background_style %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
