@@ -43,7 +43,7 @@
     "custom_liquid_4wP8Ud": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"full-blank-row\">\n<div class=\"row-full-width-inner\" data-element=\"inner\"><div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\"><div style=\"display:flex;gap:8px;justify-content:space-between;align-items:center\">\n  <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Designed for your journey<\/span>\n  <div class=\"theme-arrow theme-arrow--semibold theme-arrow--white\"><\/div>\n  <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Shop YogaWorks apparel<\/span>\n<\/div><\/div><\/div><\/div>",
+        "custom_liquid": "<div class=\"_desktop\"><div class=\"full-blank-row\">\n<div class=\"row-full-width-inner\" data-element=\"inner\"><div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\"><div style=\"display:flex;gap:8px;justify-content:space-between;align-items:center\">\n  <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Designed for your journey<\/span>\n  <div class=\"theme-arrow theme-arrow--semibold theme-arrow--white\"><\/div>\n  <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Shop YogaWorks apparel<\/span>\n<\/div><\/div><\/div><\/div>\n<\/div>\n\n<div class=\"_mobile banner-desc\">\n  <div class=\"row-full-width-inner\">\n    <div data-content-type=\"html\">\n      <div class=\"banner-desc-text\" style=\"display:flex;gap:8px;justify-content:space-between;align-items:center\">\n        <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Designed for your journey<\/span>\n        <div class=\"theme-arrow theme-arrow--semibold theme-arrow--white theme-arrow--no-arrowhead\"><\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>\n\n<div class=\"_mobile banner-desc-other\">\n  <div class=\"row-full-width-inner\">\n    <div data-content-type=\"html\">\n      <div style=\"display:flex;gap:8px;justify-content:space-between;align-items:center\">\n        <div class=\"theme-arrow theme-arrow--semibold theme-arrow--white\"><\/div>\n        <span style=\"color:#fff;font-weight:bold;text-transform:uppercase;\">Shop YogaWorks apparel<\/span>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -52,13 +52,13 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>New Arrivals<\/strong>",
+        "title": "New Arrivals",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "apparel",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
