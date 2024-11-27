@@ -381,14 +381,85 @@
         });
       }
     }
+
+    if (window.innerWidth <= 768) { 
+      if( !$('.header.header--top-center').hasClass('page-width') ) {
+        $('.header.header--top-center').addClass('page-width');
+      }
+    }
   }
+
   $(document).ready(function() {
     $('.footer-logo.mobile').insertAfter('.footer-logo.desktop');
     applyMobileStyles();
 
     $(window).on('resize', function () {
       applyMobileStyles();
+
+      /* Add a class in header on mobile */
+      if (window.innerWidth <= 768) { 
+        if( !$('.header.header--top-center').hasClass('page-width') ) {
+          $('.header.header--top-center').addClass('page-width');
+        }
+      } else {
+        if( $('.header.header--top-center').hasClass('page-width') ) {
+          $('.header.header--top-center').removeClass('page-width');
+        }
+      }
     });
+
+
+    /* header menu */
+    const $menuIconOpen = $('.menu-icon-open');
+    const $menuIconClose = $('.menu-icon-close');
+    const $navigation = $('.navigation');
+    const $submenu = $navigation.find('.submenu');
+    const $topLinks = $navigation.find('.level-top');
+
+    $topLinks.each(function() {
+      const $link = $(this);
+      const width = $link.outerWidth();
+      $link.css('min-width', width + 'px');
+    });
+
+    let isNavigationLocked = false;
+
+    $menuIconOpen.off('click').show();
+    $menuIconClose.off('click').hide();
+    $navigation.removeClass('open');
+
+    $topLinks.on({
+      mouseenter: () => {
+        if ($navigation.hasClass('open') || isNavigationLocked)
+          return;
+
+        isNavigationLocked = true;
+        $navigation.addClass('open');
+
+        setTimeout( () => $submenu.addClass('open'), 300);
+        setTimeout( () => isNavigationLocked = false, 350);
+      }
+    });
+
+    $navigation.on({
+      mouseleave: () => {
+        if (!$navigation.hasClass('open') || isNavigationLocked)
+          return;
+
+        isNavigationLocked = true;
+        $submenu.removeClass('open');
+
+        setTimeout( () => $navigation.removeClass('open'), 300);
+        setTimeout( () => isNavigationLocked = false, 350);
+      }
+    });
+
+    $(document).on('click', (e) => {
+      if (!$(e.target).closest('.navigation').length && $navigation.hasClass('open')) {
+        $navigation.mouseleave();
+      }
+    });
+
   });
 </script>
 
