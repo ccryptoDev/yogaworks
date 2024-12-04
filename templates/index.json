@@ -13,8 +13,8 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "SHOP SPRING ‘24",
-            "button_link_1": "shopify:\/\/collections\/spring-24",
+            "button_label_1": "SHOP THE COLLECTION",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
